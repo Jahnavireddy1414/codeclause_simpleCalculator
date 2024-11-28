@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="calculator">
+    <h1>Simple Calculator</h1>
+    <form method="POST">
+        <input type="text" name="num1" placeholder="First Number" required>
+        <input type="text" name="num2" placeholder="Second Number" required>
+
+        <div class="operations">
+            <button type="submit" name="operation" value="add">+</button>
+            <button type="submit" name="operation" value="subtract">-</button>
+            <button type="submit" name="operation" value="multiply">*</button>
+            <button type="submit" name="operation" value="divide">/</button>
+        </div>
+    </form>
+
+    {% if result != "" %}
+    <div class="result">
+        <h2>Result: {{ result }}</h2>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

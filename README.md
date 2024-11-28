@@ -1,1 +1,1 @@
-# codeclause_simpleCalculator
+SIMPLE CALCULATOR
